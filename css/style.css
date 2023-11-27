@@ -42,6 +42,10 @@
 	transition: 0.1s ease-in-out;
 }
 
+.download-btn:hover {
+	cursor: pointer;
+}
+
 .download-btn:active {
 	background-color: #06ae56;
 }
@@ -116,6 +120,10 @@
 	font-size: 14px;
 	color: #ffffff;
 	transition: 0.1s ease-in-out;
+}
+
+.main-download-btn:hover {
+	cursor: pointer;
 }
 
 @media(max-width: 600px) {
