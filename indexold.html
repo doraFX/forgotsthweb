@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>看看忘带了什么没</title>
+		<link rel="shortcut icon" href="img/logo.png">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="head">
+					看看忘带了什么没
+				</div>
+				<div class="groth">
+
+				</div>
+				<div class="download-btn">
+					下载
+				</div>
+			</div>
+			<div class="main-out">
+				<div class="main">
+					<div class="main-logo-out">
+						<img class="main-logo" src="img/logo.png">
+					</div>
+					<div class="main-head">
+						看看忘带了什么没
+					</div>
+					<div class="main-description">
+						以防你早上起床迷迷瞪瞪忘带了什么东西
+					</div>
+					<div class="main-download-btn-out">
+						<div class="main-download-btn" id="active" onclick="android();">
+							安卓下载
+						</div>
+						<div class="main-download-btn" id="inactive" onclick="ios();">
+							ios下载
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="alert-out">
+			<div class="alert">
+				<h1>我很伤心的说</h1>
+				<h1>我没准备ios版本</h1>
+				<p>因为apple开发者账号太贵，一年99美元</p>
+				<div class="download-btn" onclick="close111();">
+					确定
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function android() {
+				window.location.href="latest.apk";
+			}
+
+			function ios() {
+				setTimeout(function() {
+					$(".alert-out").show();
+					$(".main-out").css("filter", "blur(5px)");
+				}, 100);
+
+			}
+
+			function close111() {
+				setTimeout(function() {
+					$(".alert-out").hide();
+					$(".main-out").css("filter", "blur(0px)");
+				}, 100);
+
+			}
+		</script>
+	</body>
+</html>

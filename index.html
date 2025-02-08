@@ -1,80 +1,100 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport"
-			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>看看忘带了什么没</title>
-		<link rel="shortcut icon" href="img/logo.png">
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="header">
-				<div class="head">
-					看看忘带了什么没
-				</div>
-				<div class="groth">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to DoraFX</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .btn-secondary {
+            background-color: #f8f9fa;
+            color: #007bff;
+            border: 1px solid #007bff;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        #countdown {
+            font-weight: bold;
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>看看忘带了什么没 已停止维护</h1>
+        <p>您将在 <span id="countdown">10</span> 秒内自动重定向到主站点。</p>
+        <a href="https://dorafx.top" class="btn btn-primary">现在访问主站点</a>
+        <a href="indexold.html" class="btn btn-secondary">访问 看看忘带了什么没</a>
+    </div>
 
-				</div>
-				<div class="download-btn">
-					下载
-				</div>
-			</div>
-			<div class="main-out">
-				<div class="main">
-					<div class="main-logo-out">
-						<img class="main-logo" src="img/logo.png">
-					</div>
-					<div class="main-head">
-						看看忘带了什么没
-					</div>
-					<div class="main-description">
-						以防你早上起床迷迷瞪瞪忘带了什么东西
-					</div>
-					<div class="main-download-btn-out">
-						<div class="main-download-btn" id="active" onclick="android();">
-							安卓下载
-						</div>
-						<div class="main-download-btn" id="inactive" onclick="ios();">
-							ios下载
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="alert-out">
-			<div class="alert">
-				<h1>我很伤心的说</h1>
-				<h1>我没准备ios版本</h1>
-				<p>因为apple开发者账号太贵，一年99美元</p>
-				<div class="download-btn" onclick="close111();">
-					确定
-				</div>
-			</div>
-		</div>
-
-		<script type="text/javascript">
-			function android() {
-				window.location.href="latest.apk";
-			}
-
-			function ios() {
-				setTimeout(function() {
-					$(".alert-out").show();
-					$(".main-out").css("filter", "blur(5px)");
-				}, 100);
-
-			}
-
-			function close111() {
-				setTimeout(function() {
-					$(".alert-out").hide();
-					$(".main-out").css("filter", "blur(0px)");
-				}, 100);
-
-			}
-		</script>
-	</body>
+    <script>
+        let seconds = 10;
+        const countdownElement = document.getElementById('countdown');
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'https://dorafx.top';
+            }
+        }, 1000);
+    </script>
+</body>
 </html>
